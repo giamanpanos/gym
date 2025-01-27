@@ -1,4 +1,8 @@
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Variables
+// Newsletter
+const newsletterEmail = document.querySelector("#newsletter_email");
+const newsletterSubmit = document.querySelector("#newsletter_submit");
+
 // First page
 const slidePage = document.querySelector(".register__content--form__page");
 const firstNextBtn = document.querySelector(".next-1");
@@ -93,3 +97,12 @@ thirdPrevBtn.addEventListener("click", () => {
   slidePage.style.marginLeft = "-100%";
   untick();
 });
+
+// Newsletter form
+newsletterSubmit.addEventListener("click", (e) => {
+    e.preventDefault()
+    setTimeout(() => {
+    newsletterEmail.value = "";
+    alert("Thanks for subscribing to our newsletter.")
+    }, 1000)
+})
