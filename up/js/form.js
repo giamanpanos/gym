@@ -106,8 +106,8 @@ newsletterSubmit.addEventListener("click", (e) => {
     } else {
       e.preventDefault()
       setTimeout(() => {
-      newsletterForm.rese()
       alert("Thank you for subscribing to our newsletter.")
+      newsletterForm.reset()
       }, 1000)
     }
 })
