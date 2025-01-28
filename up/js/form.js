@@ -3,6 +3,11 @@
 const newsletterForm = document.querySelector(".newsletter__form");
 const newsletterSubmit = document.querySelector("#newsletter__submit");
 
+// Register Form
+const registerFirstName = document.querySelector("#register_first--name");
+const registerLastName = document.querySelector("#register_last--name");
+const registerForm1 = document.querySelector(".register__form1");
+
 // First page
 const slidePage = document.querySelector(".register__content--form__page");
 const firstNextBtn = document.querySelector(".next-1");
@@ -53,6 +58,10 @@ function untick() {
 
 // First Next Button Event Listener
 firstNextBtn.addEventListener("click", () => {
+ let isFormValid = registerForm1.checkValidity();
+    if(!isFormValid) {
+        registerForm1.reportValidity();
+  } else {
   slidePage.style.marginLeft = "-33%";
   tick();
 });
@@ -97,6 +106,20 @@ thirdPrevBtn.addEventListener("click", () => {
   slidePage.style.marginLeft = "-100%";
   untick();
 });
+
+// Newsletter form
+newsletterSubmit.addEventListener("click", (e) => {
+    let isFormValid = newsletterForm.checkValidity();
+    if(!isFormValid) {
+        newsletterForm.reportValidity();
+    } else {
+      e.preventDefault()
+      setTimeout(() => {
+      alert("Thank you for subscribing to our newsletter.")
+      newsletterForm.reset()
+      }, 1000)
+    }
+})
 
 // Newsletter form
 newsletterSubmit.addEventListener("click", (e) => {
