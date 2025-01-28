@@ -94,7 +94,7 @@ thirdNextBtn.addEventListener("click", (e) => {
 });
 
 // Submit Button Event Listener
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", (e) => {
   let isFormValid = registerForm4.checkValidity();
     if(!isFormValid) {
         registerForm4.reportValidity();
