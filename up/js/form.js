@@ -57,13 +57,14 @@ function untick() {
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Next Btns Events
 
 // First Next Button Event Listener
-firstNextBtn.addEventListener("click", () => {
+firstNextBtn.addEventListener("click", (e) => {
  let isFormValid = registerForm1.checkValidity();
     if(!isFormValid) {
         registerForm1.reportValidity();
   } else {
-  slidePage.style.marginLeft = "-33%";
-  tick();
+    e.prevent.Default()
+    slidePage.style.marginLeft = "-33%";
+    tick();
 });
 
 // Second Next Button Event Listener
