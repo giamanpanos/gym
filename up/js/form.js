@@ -111,19 +111,22 @@ submitBtn.addEventListener("click", () => {
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Previous Btns Events
 
 // First Previous Button Event Listener
-firstPrevBtn.addEventListener("click", () => {
+firstPrevBtn.addEventListener("click", (e) => {
+  e.preventDefault()
   slidePage.style.marginLeft = "0";
   untick();
 });
 
 // Second Previous Button Event Listener
-secondPrevBtn.addEventListener("click", () => {
+secondPrevBtn.addEventListener("click", (e) => {
+  e.preventDefault()
   slidePage.style.marginLeft = "-33%";
   untick();
 });
 
 // Third Previous Button Event Listener
-thirdPrevBtn.addEventListener("click", () => {
+thirdPrevBtn.addEventListener("click", (e) => {
+  e.preventDefault()
   slidePage.style.marginLeft = "-100%";
   untick();
 });
