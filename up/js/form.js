@@ -63,6 +63,7 @@ firstNextBtn.addEventListener("click", (e) => {
     e.preventDefault()
     slidePage.style.marginLeft = "-33%";
     tick();
+  }
 });
 
 // Second Next Button Event Listener
