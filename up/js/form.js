@@ -62,7 +62,7 @@ firstNextBtn.addEventListener("click", (e) => {
     if(!isFormValid) {
         registerForm1.reportValidity();
   } else {
-    e.prevent.Default()
+    e.preventDefault()
     slidePage.style.marginLeft = "-33%";
     tick();
 });
