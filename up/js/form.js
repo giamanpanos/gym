@@ -5,6 +5,9 @@ const newsletterSubmit = document.querySelector("#newsletter__submit");
 
 // Register Form
 const registerForm1 = document.querySelector(".register-form-1");
+const registerForm2 = document.querySelector(".register-form-2");
+const registerForm3 = document.querySelector(".register-form-3");
+const registerForm4 = document.querySelector(".register-form-4");
 
 // First page
 const slidePage = document.querySelector(".register__content--form__page");
@@ -67,24 +70,42 @@ firstNextBtn.addEventListener("click", (e) => {
 });
 
 // Second Next Button Event Listener
-secondNextBtn.addEventListener("click", () => {
-  slidePage.style.marginLeft = "-100%";
-  tick();
+secondNextBtn.addEventListener("click", (e) => {
+   let isFormValid = registerForm2.checkValidity();
+    if(!isFormValid) {
+        registerForm2.reportValidity();
+  } else {
+    e.preventDefault()
+    slidePage.style.marginLeft = "-100%";
+    tick();
+  }
 });
 
 // Third Next Button Event Listener
-thirdNextBtn.addEventListener("click", () => {
-  slidePage.style.marginLeft = "-200%";
-  tick();
+thirdNextBtn.addEventListener("click", (e) => {
+    let isFormValid = registerForm3.checkValidity();
+    if(!isFormValid) {
+        registerForm3.reportValidity();
+  } else {
+    e.preventDefault()
+    slidePage.style.marginLeft = "-200%";
+    tick();
+  }
 });
 
 // Submit Button Event Listener
 submitBtn.addEventListener("click", () => {
-  tick();
-  setTimeout(() => {
-    alert("Your Form Has Been Successfully Submitted. Thank You My Friend");
-    location.reload();
-  }, 1000);
+  let isFormValid = registerForm4.checkValidity();
+    if(!isFormValid) {
+        registerForm4.reportValidity();
+  } else {
+    e.preventDefault()
+    tick();
+    setTimeout(() => {
+      alert("Your form has been successfully submitted.");
+      location.reload();
+    }, 1000);
+  }
 });
 
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Previous Btns Events
