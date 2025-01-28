@@ -6,7 +6,7 @@ const newsletterSubmit = document.querySelector("#newsletter__submit");
 // Register Form
 const registerFirstName = document.querySelector("#register_first--name");
 const registerLastName = document.querySelector("#register_last--name");
-const registerForm1 = document.querySelector(".register__form1");
+const registerForm1 = document.querySelector(".register__content--form__page");
 
 // First page
 const slidePage = document.querySelector(".register__content--form__page");
