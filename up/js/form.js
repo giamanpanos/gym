@@ -1,7 +1,7 @@
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Variables
 // Newsletter
-const newsletterEmail = document.querySelector("#newsletter_email");
-const newsletterSubmit = document.querySelector("#newsletter_submit");
+const newsletterForm = document.querySelector("#newsletter__form");
+const newsletterSubmit = document.querySelector("#newsletter__submit");
 
 // First page
 const slidePage = document.querySelector(".register__content--form__page");
@@ -100,9 +100,14 @@ thirdPrevBtn.addEventListener("click", () => {
 
 // Newsletter form
 newsletterSubmit.addEventListener("click", (e) => {
-    e.preventDefault()
-    setTimeout(() => {
-    newsletterEmail.value = "";
-    alert("Thanks for subscribing to our newsletter.")
-    }, 1000)
+    let isFormValid = newsletterForm.checkValidity();
+    if(!isFormValid) {
+        newsletterForm.reportValidity();
+    } else {
+      e.preventDefault()
+      setTimeout(() => {
+      newsletterForm.rese()
+      alert("Thank you for subscribing to our newsletter.")
+      }, 1000)
+    }
 })
