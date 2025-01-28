@@ -1,6 +1,6 @@
 //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*- Variables
 // Newsletter
-const newsletterForm = document.querySelector("#newsletter__form");
+const newsletterForm = document.querySelector(".newsletter__form");
 const newsletterSubmit = document.querySelector("#newsletter__submit");
 
 // First page
